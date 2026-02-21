@@ -21,9 +21,14 @@
 
             File.AppendAllText("newFile.txt", text);
 
-            string fileText = File.ReadAllText("newFile.txt").ToLowerInvariant();
-        
-           
+            string fileText = File.ReadAllText("newFile.txt");
+
+            var wordsCounter = new CountingWords();
+
+            wordsCounter.CountWords(text);
+            wordsCounter.CountWords(text);
+
+
 
         }
     }
