@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+            File.WriteAllText("newFile.txt", "words analyzer");
         }
     }
 }
