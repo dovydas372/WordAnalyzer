@@ -21,7 +21,9 @@
 
             File.AppendAllText("newFile.txt", text);
 
-
+            string fileText = File.ReadAllText("newFile.txt").ToLowerInvariant();
+        
+           
 
         }
     }
