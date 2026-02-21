@@ -1,4 +1,6 @@
-﻿namespace WordAnalyzer
+﻿using System.Linq.Expressions;
+
+namespace WordAnalyzer
 {
     internal class Program
     {
@@ -25,11 +27,17 @@
 
             var wordsCounter = new CountingWords();
 
-            wordsCounter.CountWords(text);
+            printDictionary(wordsCounter.CountWords(text));
 
 
-    
+        }
 
+        static void printDictionary(Dictionary<string, int> dictionary)
+        {
+            foreach (var element in dictionary.OrderByDescending(x => x.Value))
+            {
+                Console.WriteLine($"Word: {element.Key}, times found: {element.Value} ");
+            }
         }
     }
 }
