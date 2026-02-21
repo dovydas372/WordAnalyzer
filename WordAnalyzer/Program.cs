@@ -25,10 +25,10 @@
 
             var wordsCounter = new CountingWords();
 
-            wordsCounter.CountWords(text); 
+            wordsCounter.CountWords(text);
+            wordsCounter.CountWords(text);
 
 
-    
 
         }
     }
