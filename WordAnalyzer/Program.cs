@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            string filePath = @"C:\Users\PMAC\Desktop\PROGRAMAVIMAS\C# pamokos\tekstas.txt";
+            string filePath = @"C:\Users\PMAC\Desktop\PROGRAMAVIMAS\C# pamokos\Words.txt";
 
             try
             {
@@ -12,7 +12,7 @@
                 var wordsCounter = new CountingWords();
                 var result = wordsCounter.CountWords(fileText);
              
-
+                PrintDictionary(result);
                 
             }
             catch (FileNotFoundException)
@@ -29,6 +29,13 @@
             }
         }
 
-       
+        static void PrintDictionary(Dictionary<string, int> dictionary)
+        {
+            foreach (var element in dictionary.OrderByDescending(x => x.Value))
+            {
+                Console.WriteLine($"Word: {element.Key}, times found: {element.Value}");
+            }
+        }
+
     }
 }
