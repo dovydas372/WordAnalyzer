@@ -9,7 +9,8 @@
             try
             {
                 string fileText = File.ReadAllText(filePath);
-
+                var wordsCounter = new CountingWords();
+                var result = wordsCounter.CountWords(fileText);
              
 
                 
