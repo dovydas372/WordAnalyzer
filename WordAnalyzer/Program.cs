@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            string filePath = @"C:\Users\PMAC\Desktop\PROGRAMAVIMAS\C# pamokos\Words.txt";
+            string filePath = @"C:\Users\PMAC\Desktop\PROGRAMAVIMAS\C# pamokos\NewWordAnalyzer\Words.txt";
 
             try
             {
